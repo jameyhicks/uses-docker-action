@@ -7,9 +7,15 @@ jobs:
     steps:
       - name: Hello world action step
         id: hello
-        uses: jameyhicks/docker-action@v2
+        uses: jameyhicks/docker-action@v5
         with:
-          who-to-greet: 'Mona the Octocat'
+          build-directory: 'Mona the Octocat'
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
+
+      - name: Upload Build Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: workspace_artifacts
+          path: ${{ github.workspace/output }}
