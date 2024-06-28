@@ -1,0 +1,21 @@
+# action.yml
+name: 'Something Action'
+description: 'Use a Dockerfile to build something'
+inputs:
+  - build-directory:
+      description: 'Which directory in which to build'
+      required: true
+      default: 'sample'
+  - build-target:
+      description: 'Which target to build'
+      required: true
+      default: 'all'
+outputs:
+  time: # id of output
+    description: 'The time we greeted you'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  env:
+    BUILD_DIRECTORY: ${{ inputs.build-directory }}
+    BUILD_TARGET: ${{ inputs.build-target }}

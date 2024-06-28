@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: Hello world action step
         id: hello
-        uses: jameyhicks/docker-action@v7
+        uses: .github/actions
         with:
           build-directory: '.'
           build-target: 'all'
