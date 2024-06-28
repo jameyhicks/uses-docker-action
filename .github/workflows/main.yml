@@ -11,7 +11,7 @@ jobs:
 
       - name: Hello world action step
         id: hello
-        uses: jameyhicks/docker-action@v8
+        uses: jameyhicks/docker-action@v9
         with:
           build-directory: '.'
           build-target: 'all'
