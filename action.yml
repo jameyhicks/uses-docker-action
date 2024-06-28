@@ -2,14 +2,14 @@
 name: 'Something Action'
 description: 'why'
 inputs:
-  - build-directory:
-      description: 'Which directory in which to build'
-      required: true
-      default: 'sample'
-  - build-target:
-      description: 'Which target to build'
-      required: true
-      default: 'all'
+  build-directory:
+    description: 'Which directory in which to build'
+    required: true
+    default: 'sample'
+  build-target:
+    description: 'Which target to build'
+    required: true
+    default: 'all'
 outputs:
   time: # id of output
     description: 'The time we greeted you'
