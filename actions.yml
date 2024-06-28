@@ -1,6 +1,6 @@
 # action.yml
 name: 'Something Action'
-description: 'Use a Dockerfile to build something'
+description: 'why'
 inputs:
   - build-directory:
       description: 'Which directory in which to build'
