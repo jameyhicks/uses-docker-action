@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: Hello world action step
         id: hello
-        uses: .github/actions
+        uses: ../actions
         with:
           build-directory: '.'
           build-target: 'all'
